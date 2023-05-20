@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de control</title>
+    <!-- BOOSTRAP CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <!-- Toastify CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./control.css">
+    <script src="./control.js" type="module"></script>
+    <script src="./CamaraRasp.js" type="module"></script>
+    <style>
+        body {
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          text-align: center;
+          background-color: #f2f2f2;
+          margin: 0;
+          padding: 20px;
+        }
+        
+        h2 {
+          color: #333;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          font-size: 28px;
+        }
+        
+        p {
+          color: #666;
+          font-size: 18px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        ol {
+          text-align: left;
+          max-width: 600px;
+          margin: 0 auto;
+          padding-left: 20px;
+        }
+        
+        li {
+          margin-bottom: 10px;
+          font-size: 16px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+      </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+        <div class="container">
+            <a class="navbar-brand" href="./control.html">PANEL DE CONTROL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="galeria.html">Galería de Imágenes</a>
+                    <a class="nav-link" href="equipo.html">Equipo de trabajo</a>
+                    <a class="nav-link" href="graficar.html">Dashboard</a>
+                    <a class="nav-link" href="control.html">Panel de control</a>
+                    <a class="nav-link" href="index.html">Volver a Página principal</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <h2>¡Bienvenido!</h2>
+    <p>Por favor, lee las instrucciones antes de continuar:</p>
+    <ol>
+        <li>Toma una foto y selecciona la ubicación dando click en el espacio donde se desea realizar una acción
+            especifica (Plantar o Regar).</li>
+        <li>Luego recarga la página o de click en la esquina superior izquierda donde dice Panel de control para
+            visualizar la nueva imagen.</li>
+        <li>Ahora selecciona las ubicaciones en el mismo orden que desea que se realiza la accion.</li>
+        <li>Proceda a dar click en Plantar o Regar según lo requiera.</li>
+        <li>Finalmente, seleccione el botón de "Iniciar proceso"</li>
+    </ol>
+
+    <div class="container">
+
+        <div class="columna">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="columna">
+            <button id="btn-luz">Luz</button>
+            <button id="btn-foto">Foto</button>
+            <button id="btn-plantar">Plantar</button>
+            <button id="btn-regar">Regar</button>
+            <button id="btn-iniciar">Iniciar proceso</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

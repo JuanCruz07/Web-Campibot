@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campibot-UMNG</title>
+  <!-- BOOSTRAP CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <!-- Navbar remplaza el header -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">CAMPIBOT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="index.html">Información general</a>
+          <a class="nav-link" href="galeria.html">Galería de Imágenes</a>
+          <a class="nav-link" href="equipo.html">Equipo de Trabajo</a>
+          <a class="nav-link logged-in" style="display: none;" href="graficar.html">Dashboard</a>
+          <a class="nav-link logged-in" style="display: none;" href="control.html">Panel de CAMPIBOT</a>
+          <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Iniciar
+            sesión</a>
+          <a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarse</a>
+          <a class="nav-link logged-in" href="#" id="logout">Cerrar sesión</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Aquí Esta la seccion central de la página web -->
+  <section id="objetivo" style="background-image: url('./Imagenes/imagen1.jpg')">
+    <div class="container">
+      <h2>Objetivo del proyecto</h2>
+      <p>El objetivo principal del proyecto es desarrollar un robot capaz de realizar labores de siembra, cosecha y
+        cultivo en diferentes tipos de terrenos y cultivos. El robot estará diseñado para ser fácilmente programable y
+        personalizable, lo que lo hace ideal para agricultores de todos los niveles.</p>
+    </div>
+  </section>
+  <section id="alcance" style="background-image: url('./Imagenes/imagen2.jpg')">
+    <div class="container">
+      <h2>Alcance del proyecto</h2>
+      <p>El proyecto se enfoca en el desarrollo de un robot agrícola completamente funcional y fácil de usar que pueda
+        reducir significativamente el tiempo y los costos de mano de obra en la agricultura. El robot puede ser
+        utilizado por agricultores individuales y grandes empresas, mejorando así la eficiencia y la rentabilidad en la
+        producción de cultivos.</p>
+    </div>
+  </section>
+  <section id="detalles" style="background-image: url('./Imagenes/imagen3.jpg')">
+    <div class="container">
+      <h2>Detalles del robot</h2>
+      <p>El robot está diseñado para ser fácilmente programable y personalizable, lo que permite a los usuarios
+        adaptarlo a diferentes tipos de cultivos y terrenos. El robot cuenta con un sistema de navegación autónomo y
+        está equipado con herramientas especializadas para realizar tareas específicas, como la siembra, la cosecha y la
+        irrigación.</p>
+    </div>
+  </section>
+  <section id="impacto" style="background-image: url('./Imagenes/imagen4.jpg')">
+    <div class="container">
+      <h2>Impacto potencial en la agricultura</h2>
+      <p>El robot agrícola tiene el potencial de revolucionar la agricultura moderna al mejorar significativamente la
+        eficiencia y la rentabilidad de la producción de cultivos. El uso del robot puede reducir los costos de mano de
+        obra y aumentar la producción, lo que puede tener un impacto positivo en la economía local y global. Además, el
+        robot también puede ayudar a reducir el impacto ambiental de la agricultura al reducir el uso de pesticidas y
+        otros químicos.</p>
+    </div>
+  </section>
+  <!-- Aquí Esta la seccion central de la página web -->
+  <!-- Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h3>Datos</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-5">
+          <form id="signup-form">
+            <label for="email">Email:</label>
+            <input type="text" id="signup-email" class="form-control mb-3" placeholder="Title" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="signup-password" class="form-control mb-3" placeholder="Password" required>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Ingresar</h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="login-form">
+            <label for="email">Email</label>
+            <input type="text" id="login-email" class="form-control mb-3" placeholder="Title" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="login-password" class="form-control mb-3" placeholder="Password" required>
+
+            <button type="submit" class="btn btn-success w-100 mb-4">Login</button>
+
+            <button type="button" class="btn btn-info" id="googleLogin">Google</button>
+            <button type="button" class="btn btn-primary" id="facebookLogin">Facebook</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Aquí esta la parte final de la página web -->
+  <footer>
+    <div class="column">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAjdJREFUSEvFlusxBUEQhc+NABEgAyEQASJABIiADJABESACRIAMyIAM1Lc1PdV3zHPvj9tVW7tVO92n+/RrFlqTLNaEqznA+5K2Je0Ep38kfUj6lMR3l/QCA3YuifdmxfKTpDtJry30FjAgN5JOW4aS/wAfBwawgf6tP1MD3pP06CgdxJ5oP5B0FFi66AEG9KVBa48jgJ8FO7DwZUq5iKHmfYVIvUOXgWIKkcgj3Tnge0knPeFUzvxKglpsmVxL4pkkBYZiol1FHgJApDUYqwLPifY75I5W4kkBLQgqO+Y5jZhi2CiEy4DAMYYFxksAJbaYAcjU4x6YH1RyKuQLb4lmVEgdjiJLBeaBqTr61gtRAmrKo8DoZgvMA5P8q8QyA6A5/gremMPe6VhgNeC3MJtHo+Q8FAO8NK1CtU8tVaPamn8UGFDqgbffVtQQeZ6orxXXHJptOvFO6wIG6IR/VY0jvp1GgBmz1AdzOZ1YxhiRxi2X9rEfIOzVNEcp7QAyXskbtqAz1wHQjq0isO9lot/N3CoAOwwgtvKeg9HcDYTzzAdqJnZIa0ngPZ5SFHiNY7xNAGTjlFrOQG0eRMXSWgQQJcuLH6OA2Vwu3bHQ5aoEtVvB8aWzpRsIUUGjNTyFgzOtsYkej10EGbfZvLfuXBhgjHp6e/uarZVrq0m/BcwZoibPpa2Vc4SdjE7xutsDjGFyRhERQckBaCUVONpcmb3APiqcsFzyTe6JbGiZzAHuzXH13NqA/wClLnsf3FsoSAAAAABJRU5ErkJggg=="
+        alt="Logo del Proyecto">
+    </div>
+    <div class="column">
+      <h3>Servicios del robot</h3>
+      <ul>
+        <li>Servicio 1</li>
+        <li>Servicio 2</li>
+        <li>Servicio 3</li>
+        <li>Servicio 4</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h3>Redes sociales</h3>
+      <div class="social-buttons">
+        <a href="https://www.facebook.com/profile.php?id=100090930678805" class="button facebook">Facebook</a>
+        <a href="https://www.instagram.com/campibot/" class="button instagram">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Toastify js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="./main.js" type="module"></script>
+</body>
+</html>

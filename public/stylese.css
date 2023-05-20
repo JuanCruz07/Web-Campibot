@@ -1,0 +1,101 @@
+/* Estilos CSS para la página */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* Estilos para el título */
+h1 {
+  background-color: #333;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  padding: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Estilos para las tablas */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 50px auto;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  caption-side: top; /* Agregado para ubicar el caption arriba de la tabla */
+}
+
+th, td {
+  border: none;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 10px 10px 0 0;
+}
+
+td {
+  border-top: 1px solid #ddd;
+}
+
+td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+/* Estilos para las imágenes */
+img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Estilos para los botones */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #222;
+}
+
+/* Estilos para el caption */
+caption {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333;
+  caption-side: top; /* Agregado para ubicar el caption arriba de la tabla */
+}

@@ -1,0 +1,236 @@
+/*ESTILO DE GALERÍA*/
+/* Estilos para las secciones */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+/* Estilos para la galería de imágenes y/o videos */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gallery img:hover,
+.gallery video:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+/* Estilos para las secciones */
+
+/* Estilos para rejilla de imagenes */
+
+.gallery2 {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.image-container2 {
+  position: relative;
+  width: 1280x; /* Establece el ancho deseado */
+  height: 720px; /* Establece la altura deseada */
+}
+
+#myVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery .image-container {
+  position: relative;
+}
+
+.gallery .image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.gallery .image-container:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.gallery .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery .image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.gallery .image-overlay i {
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gallery .image-overlay i:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+}  
+/* Estilos para rejilla de imagenes  */
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+#image-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#image-popup img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/*ESTILO DE GALERÍA*/
+
+
+/*Estilo parte final de la página principal*/
+footer {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  text-align: center;
+  }
+  
+  .column {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  padding: 0 20px;
+  }
+  
+  .column:first-child {
+  width: auto;
+  }
+  
+  .column h3 {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+  
+  .column ul {
+  color: black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .column ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  }
+  
+  .social-buttons {
+  margin-top: 20px;
+  }
+  
+  .button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+  transform: translateY(-2px);
+  }
+  
+  .facebook {
+  background-color: #3b5998;
+  color: #fff;
+  transition: all 0.3s ease;
+  }
+  
+  .facebook:hover {
+  background-color: #2d4278;
+  }
+  
+  .instagram {
+  background-color: #c32aa3;
+  color: #fff;
+  transition: all 0.3s ease;
+  }
+  
+  .instagram:hover {
+  background-color: #9d247d;
+  }
+  
+  .linkedin {
+  background-color: #0077b5;
+  color: #fff;
+  transition: all 0.3s ease;
+  }
+  
+  .linkedin:hover {
+  background-color: #00609e;
+  }
+  /*Estilo parte final de la página principal*/

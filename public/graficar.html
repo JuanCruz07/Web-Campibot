@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Gráfica de datos de la Raspberry Pi</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <!-- BOOSTRAP CSS -->
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+	 <!-- Toastify CSS -->
+	 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<!-- Importa el archivo de JavaScript que definirá la gráfica -->
+	<script src="./graficar.js" type="module"></script>
+	<!-- Importa el archivo de estilos CSS -->
+	<link rel="stylesheet" href="graficar.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+
+    <div class="container">
+      <a class="navbar-brand" href="./graficar.html">DASHBOARD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="galeria.html">Galería de Imágenes</a>
+		  <a class="nav-link" href="equipo.html">Equipo de trabajo</a>
+          <a class="nav-link" href="graficar.html">Dashboard</a>
+          <a class="nav-link" href="control.html">Panel de control</a>
+          <a class="nav-link" href="index.html">Volver a Página principal</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+	<header>
+		<h1>Dashboard de datos de la Raspberry Pi</h1>
+	</header>
+	<main>
+		<section class="chart-section">
+			<h2>Gráfica de barras en tiempo real</h2>
+			<div class="chart-container centered-chart">
+				<canvas id="chartBar"></canvas>
+			</div>
+		</section>
+
+		<section class="chart-section">
+			<h2>Gráfico de torta en tiempo real</h2>
+			<div class="chart-container centered-chart">
+				<canvas id="chartPie"></canvas>
+			</div>
+		</section>
+
+		<section class="chart-section">
+			<h2>Gráficas de ejes</h2>
+			<div class="charts-container">
+				<div class="chart-container">
+					<h3>Eje X</h3>
+					<canvas id="myChartX"></canvas>
+				</div>
+				<div class="chart-container">
+					<h3>Eje Y</h3>
+					<canvas id="myChartY"></canvas>
+				</div>
+				<div class="chart-container">
+					<h3>Eje Z</h3>
+					<canvas id="myChartZ"></canvas>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>
